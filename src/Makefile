@@ -413,7 +413,7 @@ endif
 # Define include paths for required headers: INCLUDE_PATHS
 # NOTE: Several external required libraries (stb and others)
 #------------------------------------------------------------------------------------------------
-INCLUDE_PATHS = -I. -Iexternal/glfw/include -Iexternal/glfw/deps/mingw
+INCLUDE_PATHS += -I. -Iexternal/glfw/include -Iexternal/glfw/deps/mingw
 
 # Define additional directories containing required header files
 ifeq ($(PLATFORM),PLATFORM_DESKTOP)
@@ -453,7 +453,7 @@ endif
 # Define library paths containing required libs: LDFLAGS
 # NOTE: This is only required for dynamic library generation
 #------------------------------------------------------------------------------------------------
-LDFLAGS = $(CUSTOM_LDFLAGS) -L. -L$(RAYLIB_RELEASE_PATH)
+LDFLAGS += $(CUSTOM_LDFLAGS) -L. -L$(RAYLIB_RELEASE_PATH)
 
 ifeq ($(PLATFORM),PLATFORM_DESKTOP)
     ifeq ($(PLATFORM_OS),WINDOWS)
